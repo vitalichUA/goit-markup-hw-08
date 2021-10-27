@@ -1,0 +1,5 @@
+.primary-title {
+  @include font(36px, 42px, 0.03em, 700);
+
+  text-align: center;
+}

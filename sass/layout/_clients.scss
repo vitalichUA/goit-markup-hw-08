@@ -1,0 +1,45 @@
+.clients__title {
+  @include font(36px, 42px, 0.03em, 700);
+
+  text-align: center;
+}
+
+.clients-list {
+  @extend %align-items;
+}
+
+.clients__clients-list {
+  margin-top: 50px;
+}
+
+.clients-list__item + .clients-list__item {
+  margin-left: 30px;
+}
+
+.clients-list__link {
+  @extend %align-items;
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid rgba(175, 177, 184, 1);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.clients-list__icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .clients-list__link:hover &,
+  .clients-list__link:focus & {
+    fill: var(--accent-color);
+  }
+}
