@@ -1,17 +1,39 @@
 .menu-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.menu-container {
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .menu-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  justify-content: left;
+  flex-wrap: wrap;
+
   margin-left: -8px;
+  margin-top: -15px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .menu-item {
   margin-left: 8px;
+  margin-top: 15px;
 }
 
 .menu-btn {
