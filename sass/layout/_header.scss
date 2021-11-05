@@ -1,5 +1,6 @@
 .header {
   border-bottom: 1px solid rgba(236, 236, 236, 1);
+  padding: 7px 15px;
   @media screen and (min-width: 768px) {
     padding: 21px 15px;
   }
@@ -153,8 +154,7 @@
   margin-right: 10px;
 }
 
-.mob-menu {
-}
+// ------Menu
 
 .mob-menu__btn {
   background-color: transparent;
@@ -175,7 +175,7 @@
   }
 }
 
-.menu-container {
+.mob-menu__container {
   z-index: 1;
   position: fixed;
   width: 100vw;
@@ -192,11 +192,12 @@
   }
 }
 
-.menu-container_wrap {
+.menu-container__wrap {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-bottom: 40px;
 }
 
 .menu-container__item {
@@ -233,12 +234,12 @@
   }
 }
 
-.menu-container_mail {
+.menu-container__mail {
   @include font(24px, 28px, 0.02em, 500);
   color: var(--primary-text-color);
 }
 
-.menu-container_tel {
+.menu-container__tel {
   @include font(40px, 47px, 0.02em, 500);
   color: var(--accent-color);
 }

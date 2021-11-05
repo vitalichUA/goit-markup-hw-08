@@ -19,7 +19,7 @@
   clip: rect(0 0 0 0);
 }
 
-.policy-lable, .policy-icon, .social-list__link, .footer-social-link, .footer-form, .footer-btn, .header__container, .benefits-list__logo, .clients-list, .clients-list__link {
+.policy-lable, .policy-icon, .social-list__link, .footer-social-link, .footer-btn, .header__container, .benefits-list__logo, .clients-list, .clients-list__link {
   display: flex;
   align-items: center;
 }
@@ -415,8 +415,10 @@ body {
   background-color: var(--third-background-color);
 }
 
-.footer-container {
-  text-align: center;
+@media screen and (max-width: 1199px) {
+  .footer-container {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -428,7 +430,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer-container-pos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 
@@ -545,8 +547,8 @@ body {
 }
 
 .footer-form {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -575,7 +577,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
   margin-top: 20px;
   padding: 15px;
-  min-width: 320px;
+  width: 100%;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -619,6 +621,7 @@ body {
 
 .header {
   border-bottom: 1px solid #ececec;
+  padding: 7px 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -813,7 +816,7 @@ body {
   fill: var(--accent-color);
 }
 
-.menu-container {
+.mob-menu__container {
   z-index: 1;
   position: fixed;
   width: 100vw;
@@ -826,15 +829,16 @@ body {
   background-color: #fff;
 }
 
-.menu-container.is-open {
+.mob-menu__container.is-open {
   transform: translateX(0);
 }
 
-.menu-container_wrap {
+.menu-container__wrap {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-bottom: 40px;
 }
 
 .menu-container__item:not(:last-child) {
@@ -868,7 +872,7 @@ body {
   margin-bottom: 32px;
 }
 
-.menu-container_mail {
+.menu-container__mail {
   font-size: 24px;
   line-height: 1.16667;
   letter-spacing: 0.02em;
@@ -876,7 +880,7 @@ body {
   color: var(--primary-text-color);
 }
 
-.menu-container_tel {
+.menu-container__tel {
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
@@ -1278,7 +1282,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .menu-container {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 }
 
